@@ -193,10 +193,83 @@ body {
 
 /* Footer */
 footer {
+  background-color: #0a0a0a;
+  color: #ccc;
+  padding: 50px 10% 30px;
+  font-family: "Poppins", sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.footer-column h3 {
+  color: #b47cff;
+  font-size: 1.4em;
+  margin-bottom: 10px;
+}
+
+.footer-column h4 {
+  color: #b47cff;
+  margin-bottom: 15px;
+  font-size: 1.1em;
+}
+
+.footer-column p {
+  color: #888;
+  line-height: 1.6;
+  max-width: 250px;
+}
+
+.footer-column a {
+  display: block;
+  color: #aaa;
+  text-decoration: none;
+  margin-bottom: 8px;
+  font-size: 0.95em;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+.footer-column a:hover {
+  color: #fff;
+  text-shadow: 0 0 6px #b47cff;
+}
+
+.footer-bottom {
   text-align: center;
-  padding: 40px 0;
-  border-top: 1px solid #1f1f1f;
-  color: #666;
+}
+
+.footer-bottom hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, #7a00ff, #b347ff);
+  width: 80%;
+  margin: 0 auto 15px;
+}
+
+.footer-bottom p {
+  font-size: 0.85em;
+  color: #777;
+}
+
+@media (max-width: 800px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-column {
+    margin-bottom: 25px;
+  }
+
+  .footer-column p {
+    margin: 0 auto;
+  }
 }
 
 /* Animations */
@@ -592,14 +665,16 @@ select:focus {
 
 .glow-image {
   width: 100%;
-  max-width: 480px; /* أقصى عرض على الشاشات الكبيرة */
+  max-width: 480px; /* الحد الأقصى للعرض */
   height: auto;
   border-radius: 18px;
   border: 2px solid rgba(180, 100, 255, 0.5);
   box-shadow: 0 0 20px 6px rgba(180, 100, 255, 0.7);
   animation: soft-glow 4s infinite ease-in-out;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
+  object-fit: contain;
 }
+
 
 /* تأثير عند المرور */
 .glow-image:hover {
@@ -627,6 +702,12 @@ select:focus {
     max-width: 90%;
     border-radius: 12px;
     box-shadow: 0 0 14px 4px rgba(190, 120, 255, 0.8);
+  }
+}
+
+@media (min-width: 1200px) {
+  .glow-image {
+    max-width: 380px; /* تصغير الحجم على الشاشات الكبيرة */
   }
 }
 
