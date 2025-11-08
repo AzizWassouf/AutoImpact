@@ -341,6 +341,17 @@ footer {
   }
 }
 
+@media (max-width: 720px) {
+  .layers-section {
+    padding: 60px 15px; /* تقليل الحشو الجانبي */
+  }
+
+  .layers-section h2 {
+    font-size: clamp(1.5rem, 5vw, 2rem); /* حجم خط مرن حسب الشاشة */
+    margin-bottom: 30px;
+  }
+}
+
 
 /* Plans Section */
 .plans {
@@ -710,4 +721,3 @@ select:focus {
     max-width: 380px; /* تصغير الحجم على الشاشات الكبيرة */
   }
 }
-
