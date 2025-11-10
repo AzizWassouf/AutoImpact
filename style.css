@@ -741,65 +741,167 @@ select:focus {
 }
 
 
-    *{box-sizing:border-box;margin:0;padding:0}
-    html,body{height:100%;background:#0b0b0d;font-family:Inter,ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial;color:#e6e6e9}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  height: 100%;
+  background: #0b0b0d;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  color: #e6e6e9;
+}
 
-    .stage{width:100%;padding:48px 24px;display:flex;align-items:center;justify-content:center;gap:20px}
-    .viewport{
-      width:min(1200px,94%);
-      overflow:hidden;
-      border-radius:14px;
-      background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));
-      padding:18px 10px;
-      border:1px solid rgba(255,255,255,0.03);
-    }
+/* الأساس */
+.stage {
+  width: 100%;
+  padding: 48px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.viewport {
+  width: min(1200px, 94%);
+  overflow: hidden;
+  border-radius: 14px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+  padding: 18px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
 
-    .track{
-      display:flex;gap:20px;align-items:stretch;
-      will-change:transform;
-      animation:scroll-left linear infinite;
-      animation-duration:20s;
-    }
+/* الحركة */
+.track {
+  display: flex;
+  gap: 20px;
+  align-items: stretch;
+  will-change: transform;
+  animation: scroll-left linear infinite;
+  animation-duration: 10s;
+}
+.viewport:hover .track {
+  animation-play-state: paused;
+}
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
 
-    .viewport:hover .track{animation-play-state:paused}
-    @keyframes scroll-left{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+/* البطاقات */
+.card-set {
+  display: flex;
+  gap: 20px;
+  align-items: stretch;
+}
+.card {
+  flex: 0 0 220px;
+  min-width: 220px;
+  height: 260px;
+  border-radius: 14px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255,255,255,0.04);
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transform-origin: center;
+  transition: transform 300ms cubic-bezier(.2, .9, .2, 1), box-shadow 300ms;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(6px);
+  text-align: left;
+}
+.card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 14px 40px rgba(0,0,0,0.6);
+}
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(400px 120px at 10% 10%, rgba(139,92,246,0.09), transparent 12%),
+    radial-gradient(300px 90px at 90% 85%, rgba(6,182,212,0.06), transparent 12%);
+  mix-blend-mode: screen;
+}
+.icon {
+  font-size: 2.2rem;
+  color: #9b5cf6;
+  margin-bottom: 8px;
+}
+.card span {
+  font-size: .85rem;
+  color: #bfc3cd;
+  text-transform: uppercase;
+  letter-spacing: .4px;
+}
+.card-content h4 {
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin-bottom: 6px;
+}
+.card-content p {
+  font-size: .9rem;
+  color: #bfc3cd;
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+.pulse {
+  position: absolute;
+  right: -40px;
+  bottom: -40px;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(124,58,237,0.06), rgba(6,182,212,0.05));
+  filter: blur(18px);
+  opacity: 0.9;
+  transform: scale(.9);
+  animation: float 6s ease-in-out infinite;
+  pointer-events: none;
+}
+@keyframes float {
+  0% { transform: translateY(0) scale(.95); }
+  50% { transform: translateY(-8px) scale(1); }
+  100% { transform: translateY(0) scale(.95); }
+}
 
-    .card-set{display:flex;gap:20px;align-items:stretch}
+/* تحسين العرض المتوسط */
+@media (max-width: 900px) {
+  .card {
+    flex: 0 0 190px;
+    min-width: 190px;
+    height: 240px;
+  }
+  .track {
+    animation-duration: 10s; /* أسرع قليلًا */
+  }
+}
 
-    .card{
-      flex:0 0 220px;min-width:220px;height:260px;
-      border-radius:14px;
-      background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));
-      border:1px solid rgba(255,255,255,0.04);
-      padding:18px;
-      display:flex;flex-direction:column;gap:12px;
-      transform-origin:center;
-      transition:transform 300ms cubic-bezier(.2,.9,.2,1), box-shadow 300ms;
-      box-shadow:0 6px 18px rgba(0,0,0,0.5);
-      position:relative;overflow:hidden;
-      backdrop-filter:blur(6px);
-      text-align:left;
-    }
-    .card:hover{transform:translateY(-6px) scale(1.02);box-shadow:0 14px 40px rgba(0,0,0,0.6)}
-
-    .card::after{
-      content:"";position:absolute;inset:0;pointer-events:none;
-      background:radial-gradient(400px 120px at 10% 10%,rgba(139,92,246,0.09),transparent 12%),
-                 radial-gradient(300px 90px at 90% 85%,rgba(6,182,212,0.06),transparent 12%);
-      mix-blend-mode:screen;
-    }
-
-    .icon{font-size:2.2rem;color:#9b5cf6;margin-bottom:8px}
-    .card span{font-size:.85rem;color:#bfc3cd;text-transform:uppercase;letter-spacing:.4px}
-    .card-content h4{font-weight:700;font-size:1.05rem;margin-bottom:6px}
-    .card-content p{font-size:.9rem;color:#bfc3cd;line-height:1.4}
-    .pulse{
-      position:absolute;right:-40px;bottom:-40px;width:160px;height:160px;border-radius:50%;
-      background:linear-gradient(135deg,rgba(124,58,237,0.06),rgba(6,182,212,0.05));
-      filter:blur(18px);opacity:0.9;transform:scale(.9);
-      animation:float 6s ease-in-out infinite;pointer-events:none;
-    }
-    @keyframes float{0%{transform:translateY(0) scale(.95)}50%{transform:translateY(-8px) scale(1)}100%{transform:translateY(0) scale(.95)}}
-
-    @media(max-width:900px){.card{flex:0 0 190px;min-width:190px;height:240px}}
-    @media(max-width:640px){.card{flex:0 0 160px;min-width:160px;height:220px;padding:12px}.viewport{padding:12px}.stage{padding:28px 12px}}
+/* تحسين العرض الصغير */
+@media (max-width: 640px) {
+  .card {
+    flex: 0 0 170px;
+    min-width: 170px;
+    height: 230px;
+    padding: 14px;
+  }
+  .card-content h4 {
+    font-size: 0.95rem;
+  }
+  .card-content p {
+    font-size: 0.8rem;
+  }
+  .viewport {
+    padding: 10px;
+  }
+  .stage {
+    padding: 24px 10px;
+  }
+  .track {
+    animation-duration: 5s; /* أسرع على الشاشات الصغيرة */
+  }
+}

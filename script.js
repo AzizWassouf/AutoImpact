@@ -205,36 +205,61 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-    (function(){
-      const track=document.getElementById('track');
-      const set=document.getElementById('cardSet');
-      if(!track||!set)return;
-      const clone=set.cloneNode(true);
-      track.appendChild(clone);
+(function(){
+  const track=document.getElementById('track');
+  const set=document.getElementById('cardSet');
+  if(!track||!set)return;
+  const clone=set.cloneNode(true);
+  track.appendChild(clone);
 
-      requestAnimationFrame(()=>{
-        track.style.minWidth='200%';
-        set.style.flex='0 0 50%';
-        clone.style.flex='0 0 50%';
-      });
+  function adjustLayout(){
+    const vw=Math.max(document.documentElement.clientWidth||0,window.innerWidth||0);
+    const cards=set.querySelectorAll('.card').length;
+    const cardWidth=set.querySelector('.card')?.offsetWidth || 200;
+    const totalCardsWidth = cards * (cardWidth + 30); // 20 هو gap تقريبي
+    const neededPercent = Math.ceil((totalCardsWidth * 2) / vw * 100); // مضاعفة لأننا نكرر المجموعة
 
-      function adjustSpeed(){
-        const vw=Math.max(document.documentElement.clientWidth||0,window.innerWidth||0);
-        let dur=20;
-        if(vw<640)dur=28;
-        else if(vw<900)dur=23;
-        document.querySelector('.track').style.animationDuration=dur+'s';
-      }
-      adjustSpeed();
-      window.addEventListener('resize',adjustSpeed);
+    // نحد أقل شيء بـ200%
+    track.style.minWidth = Math.max(neededPercent, 200) + '%';
 
-      document.querySelectorAll('.card').forEach(card=>{
-        card.addEventListener('mousemove',e=>{
-          const r=card.getBoundingClientRect();
-          const x=(e.clientX-r.left)/r.width-0.5;
-          const y=(e.clientY-r.top)/r.height-0.5;
-          card.style.transform=`translateY(-6px) scale(1.02) rotateX(${ -y*6 }deg) rotateY(${ x*8 }deg)`;
-        });
-        card.addEventListener('mouseleave',()=>{card.style.transform=''});
-      });
-    })();
+    if(vw < 640){
+      set.style.flex='0 0 auto';
+      clone.style.flex='0 0 auto';
+    } else if(vw < 900){
+      set.style.flex='0 0 auto';
+      clone.style.flex='0 0 auto';
+    } else {
+      set.style.flex='0 0 auto';
+      clone.style.flex='0 0 auto';
+    }
+  }
+
+  function adjustSpeed(){
+    const vw=Math.max(document.documentElement.clientWidth||0,window.innerWidth||0);
+    let dur=20;
+    if(vw<640)dur=10; // بطء أكثر على الشاشات الصغيرة
+    else if(vw<900)dur=10;
+    document.querySelector('.track').style.animationDuration=dur+'s';
+  }
+
+  // تنفيذ أولي
+  adjustLayout();
+  adjustSpeed();
+  window.addEventListener('resize',()=>{
+    adjustLayout();
+    adjustSpeed();
+  });
+
+  // تفاعل البطاقات
+  document.querySelectorAll('.card').forEach(card=>{
+    card.addEventListener('mousemove',e=>{
+      const r=card.getBoundingClientRect();
+      const x=(e.clientX-r.left)/r.width-0.5;
+      const y=(e.clientY-r.top)/r.height-0.5;
+      card.style.transform=`translateY(-6px) scale(1.02) rotateX(${ -y*6 }deg) rotateY(${ x*8 }deg)`;
+    });
+    card.addEventListener('mouseleave',()=>{card.style.transform=''});
+  });
+})();
+
+
