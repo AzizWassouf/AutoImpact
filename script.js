@@ -203,3 +203,38 @@ document.addEventListener("DOMContentLoaded", () => {
 
   glowImages.forEach(img => observer.observe(img));
 });
+
+
+    (function(){
+      const track=document.getElementById('track');
+      const set=document.getElementById('cardSet');
+      if(!track||!set)return;
+      const clone=set.cloneNode(true);
+      track.appendChild(clone);
+
+      requestAnimationFrame(()=>{
+        track.style.minWidth='200%';
+        set.style.flex='0 0 50%';
+        clone.style.flex='0 0 50%';
+      });
+
+      function adjustSpeed(){
+        const vw=Math.max(document.documentElement.clientWidth||0,window.innerWidth||0);
+        let dur=20;
+        if(vw<640)dur=28;
+        else if(vw<900)dur=23;
+        document.querySelector('.track').style.animationDuration=dur+'s';
+      }
+      adjustSpeed();
+      window.addEventListener('resize',adjustSpeed);
+
+      document.querySelectorAll('.card').forEach(card=>{
+        card.addEventListener('mousemove',e=>{
+          const r=card.getBoundingClientRect();
+          const x=(e.clientX-r.left)/r.width-0.5;
+          const y=(e.clientY-r.top)/r.height-0.5;
+          card.style.transform=`translateY(-6px) scale(1.02) rotateX(${ -y*6 }deg) rotateY(${ x*8 }deg)`;
+        });
+        card.addEventListener('mouseleave',()=>{card.style.transform=''});
+      });
+    })();
