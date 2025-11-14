@@ -905,3 +905,467 @@ html, body {
     animation-duration: 5s; /* أسرع على الشاشات الصغيرة */
   }
 }
+
+
+
+
+
+/* ------------------------------------------------------------------
+   GLOBAL STYLE — AutoImpact Premium AI Design
+------------------------------------------------------------------ */
+
+:root {
+    --bg-dark: #0d0d10;
+    --bg-card: rgba(255, 255, 255, 0.04);
+    --bg-glass: rgba(255, 255, 255, 0.06);
+    --accent: #9b5cff;
+    --accent-light: #b88aff;
+    --text-main: #ffffff;
+    --text-muted: #b5b5b7;
+    --max-width: 1100px;
+
+    --radius: 16px;
+    --transition: 0.3s ease;
+}
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--bg-dark);
+    color: var(--text-main);
+    font-family: "Inter", "Poppins", sans-serif;
+    line-height: 1.8;
+    scroll-behavior: smooth;
+}
+
+/* ------------------------------------------------------------------
+   UNIVERSAL SECTION STYLE
+------------------------------------------------------------------ */
+
+.section {
+    padding: 100px 20px;
+}
+
+.section-glass {
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.04),
+        rgba(255, 255, 255, 0.02)
+    );
+    backdrop-filter: blur(12px);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+/* ------------------------------------------------------------------
+   TITLES & TEXT STYLING
+------------------------------------------------------------------ */
+
+.section-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 45px;
+    letter-spacing: -1px;
+}
+
+.section-description {
+    text-align: center;
+    color: var(--text-muted);
+    margin-bottom: 50px;
+    font-size: 1.1rem;
+}
+
+/* Highlight box (mission, final text) */
+.highlight-box {
+    background: var(--bg-glass);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    padding: 20px 25px;
+    border-radius: var(--radius);
+    margin-top: 20px;
+    line-height: 1.7;
+}
+
+/* ------------------------------------------------------------------
+   CARD DESIGN — GLOBAL
+------------------------------------------------------------------ */
+
+.professional-card,
+.info-card,
+.layer-card,
+.value-card {
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 25px;
+    border-radius: var(--radius);
+    transition: var(--transition);
+    backdrop-filter: blur(10px);
+}
+
+.professional-card:hover,
+.info-card:hover,
+.layer-card:hover,
+.value-card:hover {
+    border-color: var(--accent-light);
+    transform: translateY(-6px);
+    box-shadow: 0 10px 30px rgba(155, 92, 255, 0.1);
+}
+
+/* ------------------------------------------------------------------
+   GRIDS (CARDS LAYOUT)
+------------------------------------------------------------------ */
+
+.layers-grid,
+.section-cards,
+.values-grid {
+    display: grid;
+    gap: 25px;
+}
+
+/* 3 columns on desktop */
+.layers-grid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.section-cards {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.values-grid {
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+}
+
+/* ------------------------------------------------------------------
+   TEXT BLOCK
+------------------------------------------------------------------ */
+
+.text-block {
+    max-width: 850px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    color: var(--text-muted);
+}
+
+/* ------------------------------------------------------------------
+   LISTS
+------------------------------------------------------------------ */
+
+.content-list,
+.bullet-list {
+    margin-top: 20px;
+    padding-left: 20px;
+}
+
+.content-list li,
+.bullet-list li {
+    margin-bottom: 10px;
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    position: relative;
+}
+
+/* Purple bullets */
+.bullet-list li::before {
+    content: "•";
+    color: var(--accent);
+    font-size: 1.4rem;
+    margin-right: 10px;
+}
+
+/* ------------------------------------------------------------------
+   ANIMATIONS (Scroll Reveal)
+------------------------------------------------------------------ */
+
+.section,
+.professional-card,
+.info-card,
+.value-card,
+.layer-card,
+.section-title {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 0.8s forwards;
+}
+
+.section:nth-child(1) { animation-delay: 0.1s; }
+.section:nth-child(2) { animation-delay: 0.2s; }
+.section:nth-child(3) { animation-delay: 0.3s; }
+
+.professional-card,
+.info-card,
+.value-card,
+.layer-card {
+    animation-delay: 0.4s;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ------------------------------------------------------------------
+   RESPONSIVE
+------------------------------------------------------------------ */
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2.2rem;
+    }
+
+    .section {
+        padding: 70px 18px;
+    }
+}
+
+
+
+
+
+/* Section base */
+.section-glass {
+  padding: 100px 0;
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.05);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Inner container */
+.section-glass .container {
+  max-width: 900px;
+  margin: auto;
+  padding: 0 20px;
+  color: #e8e8e8;
+}
+
+/* Title */
+.section-glass .section-title {
+  text-align: center;
+  font-size: 2.6rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+  margin-bottom: 40px;
+
+  /* Gradient */
+  background: linear-gradient(90deg, #8b5cf6, #8b5cf6);
+
+  /* Clip background to text */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* دعم إضافي لبعض المتصفحات */
+  background-clip: text;
+  color: transparent;
+}
+
+
+/* Paragraphs */
+.section-content p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  margin: 20px 0;
+  color: #d4d4d4;
+}
+
+/* Bullet list */
+.bullet-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 20px 0;
+}
+
+.bullet-list li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 12px;
+  font-size: 1.15rem;
+  color: #f0f0f0;
+  transition: transform 0.2s ease;
+}
+
+.bullet-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 12px;
+  height: 12px;
+  background: linear-gradient(135deg, #8b5cf6, #8b5cf6);
+  border-radius: 4px;
+  box-shadow: 0 0 8px #8b5cf6aa;
+}
+
+/* Hover effect */
+.bullet-list li:hover {
+  transform: translateX(6px);
+}
+
+/* Highlight glass box */
+.highlight-box {
+  margin-top: 35px;
+  padding: 22px 25px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.25);
+}
+
+.highlight-box p {
+  font-size: 1.25rem;
+  color: #ffffff;
+  text-align: center;
+  line-height: 1.8;
+}
+
+.highlight-box strong {
+  color: #a78bfa;
+}
+
+
+
+
+
+
+
+
+/* CONTACT GRID */
+.contact-grid {
+  display: grid;
+  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  margin-top: 40px;
+}
+
+/* CONTACT CARD */
+.contact-card {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 25px 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(155, 92, 255, 0.2);
+}
+
+/* ICONS */
+.contact-card .icon {
+  font-size: 2.5rem;
+  color: #8b5cf6;
+  margin-bottom: 15px;
+}
+
+/* CARD HEADINGS */
+.contact-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+/* CARD PARAGRAPH / LINK */
+.contact-card p {
+  font-size: 1.1rem;
+  color: #d4d4d4;
+}
+
+.contact-card p a {
+  color: #8b5cf6;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contact-card p a:hover {
+  color: #b88aff;
+}
+
+
+/* BASE NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #8b5cf6;
+}
+
+.navbar .nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar .nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.navbar .nav-links a:hover {
+  color: #b88aff;
+}
+
+/* HAMBURGER MENU */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  border-radius: 3px;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+  .navbar .nav-links {
+    position: absolute;
+    top: 60px;
+    right: -100%;
+    flex-direction: column;
+    background: rgba(0,0,0,0.9);
+    width: 200px;
+    padding: 20px;
+    gap: 15px;
+    transition: right 0.3s ease;
+    border-radius: 10px 0 0 10px;
+  }
+
+  .navbar .nav-links.active {
+    right: 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
