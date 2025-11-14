@@ -270,4 +270,5 @@ const navLinks = document.querySelector('.nav-links');
 
 hamburger.addEventListener('click', () => {
   navLinks.classList.toggle('active');
+  document.body.classList.toggle('no-scroll'); // إيقاف التمرير
 });
