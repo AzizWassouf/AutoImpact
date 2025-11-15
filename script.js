@@ -261,14 +261,3 @@ document.addEventListener("DOMContentLoaded", () => {
     card.addEventListener('mouseleave',()=>{card.style.transform=''});
   });
 })();
-
-
-
-
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
-
-hamburger.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
-  document.body.classList.toggle('no-scroll'); // إيقاف التمرير
-});

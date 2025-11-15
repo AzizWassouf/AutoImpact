@@ -20,12 +20,13 @@ body {
   padding: 20px 60px;
   background: rgba(20, 20, 25, 0.7);
   backdrop-filter: blur(10px);
-  position: fixed;
+  position: sticky;
   width: 100%;
   top: 0;
-  z-index: 100;
+  z-index: 1000;
   border-bottom: 1px solid #252525;
 }
+
 
 .logo {
   color: #fff;
@@ -954,8 +955,8 @@ body {
 .section-glass {
     background: linear-gradient(
         to bottom,
-        rgba(255, 255, 255, 0.04),
-        rgba(255, 255, 255, 0.02)
+        rgba(0, 0, 0, 0.25),
+        rgba(0, 0, 0, 0.25)
     );
     backdrop-filter: blur(12px);
     border-top: 1px solid rgba(255, 255, 255, 0.05);
@@ -1137,7 +1138,7 @@ body {
 .section-glass {
   padding: 100px 0;
   backdrop-filter: blur(12px);
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(0, 0, 0, 0.25);
   border-top: 1px solid rgba(255, 255, 255, 0.15);
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
@@ -1217,8 +1218,8 @@ body {
   margin-top: 35px;
   padding: 22px 25px;
   border-radius: 14px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(14px);
   box-shadow: 0 4px 25px rgba(0, 0, 0, 0.25);
 }
@@ -1295,107 +1296,15 @@ body {
 }
 
 
-/* BASE NAVBAR */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 30px;
-  background: rgba(20, 20, 25, 0.7);
-  backdrop-filter: blur(10px);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  border-bottom: 1px solid #252525;
-}
 
-
-.navbar .logo {
-  font-size: 1.8rem;
-  font-weight: 700;
+.vision-icon {
+  font-size: 42px;
   color: #8b5cf6;
-}
-
-.navbar .nav-links {
-  display: flex;
-  gap: 20px;
-}
-
-.navbar .nav-links a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.2s ease;
-}
-
-.navbar .nav-links a:hover {
-  color: #b88aff;
-}
-
-/* HAMBURGER MENU */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 5px;
-}
-
-.hamburger span {
+  margin-bottom: 15px;
   display: block;
-  width: 25px;
-  height: 3px;
-  background: #fff;
-  border-radius: 3px;
+  text-align: center;
 }
 
-/* قائمة nav-links مخفية افتراضيًا على الشاشات الصغيرة */
-@media screen and (max-width: 768px) {
-  .navbar .nav-links {
-    display: none;            /* مخفية تمامًا */
-    flex-direction: column;
-    position: fixed;           /* Overlay ثابت */
-    top: 0;
-    right: 0;
-    width: 250px;
-    height: 100vh;
-    padding: 80px 20px;
-    background: rgba(0,0,0,0.95);
-    gap: 20px;
-    z-index: 9999;
-    overflow-y: auto;
-  }
-
-  /* عند الضغط على الهامبرغر، تظهر */
-  .navbar .nav-links.active {
-    display: flex;
-  }
-
-  .hamburger {
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-    gap: 5px;
-    z-index: 10000;
-  }
-
-  .hamburger span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background: #fff;
-    border-radius: 3px;
-  }
+.info-card {
+  text-align: center;
 }
-
-
-
-/* منع التمرير عند فتح القائمة */
-.no-scroll {
-  overflow: hidden;
-}
-
-.hamburger {
-  position: relative;
-  z-index: 10000; /* فوق كل شيء */
-}
-
