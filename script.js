@@ -266,10 +266,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 document.addEventListener("DOMContentLoaded", () => {
+  const loginModal = document.getElementById('loginModal');
+  const closeModal = document.getElementById('closeModal');
+  const getStartedBtn = document.querySelector('.hero .btn');
+
+  if (getStartedBtn) {
+    getStartedBtn.addEventListener('click', () => {
+      loginModal.style.display = 'flex';
+    });
+  }
+
+  if (closeModal) {
+    closeModal.addEventListener('click', () => {
+      loginModal.style.display = 'none';
+    });
+  }
+
+  // ====================
+  // Like Buttons
+  // ====================
   const likeButtons = document.querySelectorAll(".like-btn");
 
   likeButtons.forEach(btn => {
-    const postCard = btn.closest(".value-card") || btn.closest(".layer-card");
+    const postCard = btn.closest(".layer-card") || btn.closest(".value-card");
     if (!postCard) return;
 
     const postId = postCard.dataset.postId;
@@ -312,5 +331,3 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
-
-
