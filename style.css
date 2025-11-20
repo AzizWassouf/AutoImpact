@@ -461,9 +461,11 @@ footer {
   display: none;
   align-items: center;
   justify-content: center;
-  z-index: 999;
+  z-index: 5000; /* <— هنا أصل المشكلة! */
   animation: fadeIn 0.3s ease;
+  padding-top: 20px;
 }
+
 
 .modal-content {
   background: #1b1b1e;
@@ -570,6 +572,7 @@ footer {
   opacity: 0;
   transform: translateY(10px);
   transition: all 0.3s ease;
+  padding-top: 20px;
 }
 
 .form-section.active {
@@ -578,6 +581,7 @@ footer {
   transform: translateY(0);
 }
 
+/* === Select Input === */
 select {
   background: #111;
   border: 1px solid #333;
@@ -592,6 +596,8 @@ select:focus {
   border-color: #8b5cf6;
   outline: none;
 }
+
+
 
 /* === Country Dropdown === */
 .country-dropdown {
@@ -1307,4 +1313,28 @@ body {
 
 .info-card {
   text-align: center;
+}
+
+
+.like-btn {
+  margin-top: 10px;
+  padding: 6px 12px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s;
+}
+
+.like-btn:hover {
+  background-color: #e0e0e0;
+}
+.like-btn.liked {
+  background-color: #8b5cf6;
+  color: #fff;
+  border-color: #7c3aed;
 }

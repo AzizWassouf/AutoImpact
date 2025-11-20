@@ -45,11 +45,14 @@
   </script>  
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css">
   <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css">
   <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css">
   <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css">
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+  
   
   <script defer src="script.js"></script>
 </head>
@@ -59,15 +62,17 @@
   <nav class="navbar">
     <div class="logo">AutoImpact<span class="dot"> Ai</span></div>  
     <div class="nav-links">
-      <a href="#layers">Layers</a>
-      <a href="#features">Features</a>
-      <a href="#contact">Beta</a>
-      <a href="#plans">Plans</a>
+      <a href="#why-cookies">Why Cookies</a>
+      <a href="#cookie-types">Cookie Types</a>
+      <a href="#data">Data Collect</a>
+      <a href="#manage">Manage Cookies</a>
+      <a href="#contact">Contact</a>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <section class="hero">
+<!-- COOKIES PAGE -->
+<section class="hero">
     <div class="hero-text">
       <h1>AutoImpact<span class="highlight"> Ai</span></h1>
       <p>
@@ -76,170 +81,193 @@
       </p>
       <button class="btn">Get Started</button>
     </div>
-  </section>
+</section> 
+<section id="cookies" class="section section-glass">
+  <div class="container">
+    <h2 class="section-title">Cookies Policy</h2>
 
-  <!-- Layers Section -->
-  <section id="layers" class="layers-section">
-    <h2>The Intelligence Layers</h2>
+    <div class="section-content">
+      <p>
+        We use cookies and similar technologies to enhance your experience,
+        analyze performance, personalize content, and ensure secure access to
+        our platform. This page explains what information we collect, why we
+        collect it, and how you can manage your preferences.
+      </p>
+
+      <div class="highlight-box">
+        <p>
+          By using our platform, you agree to the use of cookies as described
+          in this policy. You can manage or disable cookies at any time.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- WHY WE USE COOKIES -->
+<section id="why-cookies" class="section section-glass">
+  <div class="container">
+    <h2 class="section-title">Why We Use Cookies</h2>
+
+    <div class="section-cards">
+
+      <div class="info-card">
+        <i class="fi fi-rr-dashboard vision-icon"></i>
+        <p>
+          To maintain platform performance, ensure smooth navigation, and
+          provide a fast, responsive experience across all devices.
+        </p>
+      </div>
+
+      <div class="info-card">
+        <i class="fi fi-rr-shield-check vision-icon"></i>
+        <p>
+          To keep your account secure, validate requests, prevent fraud, and
+          protect our platform from malicious activity.
+        </p>
+      </div>
+
+      <div class="info-card">
+        <i class="fi fi-rr-analyse vision-icon"></i>
+        <p>
+          To understand how users interact with our platform through anonymous
+          analytics, helping us improve features and overall usability.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- TYPES OF COOKIES -->
+<section id="cookie-types" class="section section-glass">
+  <div class="container">
+    <h2 class="section-title">Types of Cookies We Use</h2>
+
     <div class="layers-grid">
-      <div class="layer-card">
-        <div class="icon"><i class="fi fi-rr-brain"></i></div>
-        <h3>Cognitive Layer</h3>
-        <p>Adaptive reasoning, contextual understanding, and human-like problem solving.</p>
+
+      <div class="layer-card professional-card">
+        <i class="fi fi-rr-lock vision-icon"></i>
+        <h3>Essential Cookies</h3>
+        <p>
+          Required for the platform to function. These cookies handle login
+          sessions, security, and core navigation.
+        </p>
       </div>
-      <div class="layer-card">
-        <div class="icon"><i class="fi fi-rr-layers"></i></div>
-        <h3>Process Layer</h3>
-        <p>Automation that stacks AI modules to collaborate efficiently and intelligently.</p>
+
+      <div class="layer-card professional-card">
+        <i class="fi fi-rr-browser vision-icon"></i>
+        <h3>Functional Cookies</h3>
+        <p>
+          Improve your user experience by remembering your preferences, language,
+          and interface settings.
+        </p>
       </div>
-      <div class="layer-card">
-        <div class="icon"><i class="fi fi-rr-rocket-lunch"></i></div>
-        <h3>Impact Layer</h3>
-        <p>Real-time optimization and execution across integrated environments and systems.</p>
+
+      <div class="layer-card professional-card">
+        <i class="fi fi-rr-stats vision-icon"></i>
+        <h3>Analytics Cookies</h3>
+        <p>
+          Help us understand how users explore the platform through anonymous
+          metrics that power optimization and development.
+        </p>
       </div>
-      
+
+      <div class="layer-card professional-card">
+        <i class="fi fi-rr-bullhorn vision-icon"></i>
+        <h3>Marketing Cookies</h3>
+        <p>
+          Used to deliver relevant content and measure the effectiveness of
+          promotions or platform updates.
+        </p>
+      </div>
+
     </div>
-    <!-- Decorative glowing image -->
-    <div class="decorative-image">
-      <img src="media/photo2.jpg" alt="AI Visualization" class="glow-image">
-    </div>       
-  </section>
+  </div>
+</section>
 
-  <!-- Features Section -->
-  <section id="features" class="features">
-    <h2>Key Features</h2>
-    <div class="feature-cards">
-      <div class="feature-card">
-        <h4>Layered Intelligence</h4>
-        <p>AI models communicate across levels to self-optimize and enhance performance.</p>
+
+<!-- WHAT INFORMATION WE COLLECT -->
+<section id="data" class="section section-glass">
+  <div class="container">
+    <h2 class="section-title">What Cookies Collect</h2>
+
+    <div class="values-grid">
+
+      <div class="value-card">
+        <i class="fi fi-rr-laptop vision-icon"></i>
+        <strong>Device & Browser Information</strong>
+        <p>Operating system, browser version, hardware type, screen size.</p>
       </div>
-      <div class="feature-card">
-        <h4>Seamless Orchestration</h4>
-        <p>Unify multiple AIs and data streams into one coherent, evolving intelligence.</p>
+
+      <div class="value-card">
+        <i class="fi fi-rr-navigation vision-icon"></i>
+        <strong>Usage & Interaction Data</strong>
+        <p>Pages visited, clicks, time on page, scroll depth, session flow.</p>
       </div>
-      <div class="feature-card">
-        <h4>Scalable Integration</h4>
-        <p>Connect to APIs, workflows, and tools without complex setup — plug and evolve.</p>
+
+      <div class="value-card">
+        <i class="fi fi-rr-key vision-icon"></i>
+        <strong>Authentication Tokens</strong>
+        <p>Session IDs used to keep you logged in securely.</p>
       </div>
+
+      <div class="value-card">
+        <i class="fi fi-rr-analytics vision-icon"></i>
+        <strong>Anonymous Analytics</strong>
+        <p>Aggregated statistics powering design improvements and feature decisions.</p>
+      </div>
+
     </div>
-    <!-- Decorative glowing image -->
-    <div class="decorative-image">
-      <img src="media/photo1.jpg" alt="AI Visualization" class="glow-image">
-    </div>    
-  </section>
+  </div>
+</section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="contact">
-    <h2>Ready to Experience AutoImpact?</h2>
-    <p>Connect your systems to the future of intelligence today.</p>
-    <button class="btn glow">Join the Beta</button>
-  </section>
 
-  <!-- Plans Section -->
-  <section id="plans" class="plans">
-    <h2>Plans & Pricing</h2>
-    <div class="plans-container">
-      <div class="plan-card">
-        <div class="plan-icon"><i class="fi fi-rs-building"></i></div>
-        <h3>AutoBusiness</h3>
-        <ul>
-          <li>Robust enterprise-grade system</li>
-          <li>Advanced operations and protection</li>
-          <li>Integration with resilient algorithms</li>
-          <li>Reliable performance under heavy load</li>
-        </ul>
-        <p class="price">$79 /mo (Basic) &nbsp;|&nbsp; $199 /mo (Pro with API & Team Support)</p>
-        <p class="target">For companies, teams, and large-scale projects</p>
-        <button class="btn">Subscribe</button>
+<!-- MANAGING COOKIES -->
+<section id="manage" class="section section-glass">
+  <div class="container">
+    <h2 class="section-title">Managing Your Cookie Preferences</h2>
+
+    <div class="section-cards">
+
+      <div class="info-card">
+        <i class="fi fi-rr-settings vision-icon"></i>
+        <p>
+          You can adjust or disable cookies through your browser settings at any time.
+          Essential cookies cannot be disabled as they ensure platform functionality.
+        </p>
       </div>
 
-      <div class="plan-card">
-        <div class="plan-icon"><i class="fi fi-rr-chart-histogram"></i></div>
-        <h3>AutoPulse</h3>
-        <ul>
-          <li>Smart marketing partner that adapts to your rhythm</li>
-          <li>No monthly subscription – pay per result</li>
-          <li>Link accounts, describe tasks, auto-execute</li>
-          <li>Create, post, analyze, and refine strategy</li>
-        </ul>
-        <p class="price">Pay-as-you-go from account balance</p>
-        <p class="target">For marketers, e-commerce, and social creators</p>
-        <button class="btn">Subscribe</button>
+      <div class="info-card">
+        <i class="fi fi-rr-info vision-icon"></i>
+        <p>
+          Some features may not work properly if you disable certain cookie types,
+          such as login sessions or personalized settings.
+        </p>
       </div>
 
-      <div class="plan-card">
-        <div class="plan-icon"><i class="fi fi-rr-sparkles"></i></div>
-        <h3>AutoLite</h3>
-        <ul>
-          <li>Lightweight, smart experience for individuals</li>
-          <li>Fast interface with simple tools</li>
-          <li>AI assistant for daily productivity</li>
-          <li>Perfect for getting started affordably</li>
-        </ul>
-        <p class="price">$7 /mo (Basic) &nbsp;|&nbsp; $15 /mo (Advanced)</p>
-        <p class="target">For freelancers, hobbyists, small projects</p>
-        <button class="btn">Subscribe</button>
-      </div>
     </div>
-    <p class="plans-footer">
-      AutoImpact offers not only tools, but a full intelligent experience combining AI, security, and self-management to fit your digital independence.
+  </div>
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact" class="section section-glass">
+  <div class="container">
+    <h2 class="section-title">Contact Us</h2>
+    <p class="section-description">
+      If you have questions about our Cookie Policy or how we use data,
+      feel free to contact us at:
     </p>
 
-    <div class="stage">
-      <div class="viewport" tabindex="0" aria-label="Infinite AI services carousel">
-        <div class="track" id="track">
-          <div class="card-set" id="cardSet">
-
-            <article class="card">
-              <i class="fi fi-rs-globe icon"></i>
-              <div class="card-content">
-                <h4>Global AI Access</h4>
-                <p>A platform that provides access to the most powerful 100 AI models globally.</p>
-              </div>
-              <div class="pulse"></div>
-            </article>
-
-            <article class="card">
-              <i class="fi fi-br-link-alt icon"></i>
-              <div class="card-content">
-                <h4>Multi-Model Integration</h4>
-                <p>Multiple models are used to accomplish the required task and achieve the best results.</p>
-              </div>
-              <div class="pulse"></div>
-            </article>
-
-            <article class="card">
-              <i class="fi fi-rr-shuffle icon"></i>
-              <div class="card-content">
-                <h4>Intelligent Switching</h4>
-                <p>Models are switched automatically and intelligently to ensure optimal performance.</p>
-              </div>
-              <div class="pulse"></div>
-            </article>
-
-            <article class="card">
-              <i class="fi fi-ss-shield-check icon"></i>
-              <div class="card-content">
-                <h4>Central Administration</h4>
-                <p>All operations and coordination between models are performed through the central ImpactCore algorithm.</p>
-              </div>
-              <div class="pulse"></div>
-            </article>
-
-            <article class="card">
-              <i class="fi fi-rs-universal-access icon"></i>
-              <div class="card-content">
-                <h4>Easy access</h4>
-                <p>Access advanced AI from anywhere in the world, with acceptance of many global payment methods and crypto.</p>
-              </div>
-              <div class="pulse"></div>
-            </article>
-
-          </div>
-        </div>
-      </div>
+    <div class="highlight-box">
+      <strong>Email: support@autoimpact-ai.com</strong>
     </div>
-  </section>
+  </div>
+</section>
+
 
   
   <!-- Login / Register Modal -->
@@ -350,7 +378,7 @@
         <h4>Legal</h4>
         <a href="privacy.html" rel="noopener noreferrer">Privacy Policy</a>
         <a href="terms.html"  rel="noopener noreferrer">Terms of Service</a>
-        <a href="cookies.html"  rel="noopener noreferrer">Cookies</a>
+        <a href="cookies.html" rel="noopener noreferrer">Cookies</a>
       </div>
     </div>
 

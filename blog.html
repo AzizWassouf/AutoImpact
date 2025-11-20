@@ -50,6 +50,8 @@
   <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css">
   <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css">
   <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css">
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css'>
   
   <script defer src="script.js"></script>
 </head>
@@ -66,180 +68,166 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-text">
-      <h1>AutoImpact<span class="highlight"> Ai</span></h1>
-      <p>
-        The <b>multi-layered AI service</b> that connects, evolves, and amplifies 
-        intelligence across digital ecosystems. Experience autonomous intelligence like never before.
-      </p>
-      <button class="btn">Get Started</button>
-    </div>
-  </section>
+<!-- BLOG PAGE -->
 
-  <!-- Layers Section -->
-  <section id="layers" class="layers-section">
-    <h2>The Intelligence Layers</h2>
-    <div class="layers-grid">
-      <div class="layer-card">
-        <div class="icon"><i class="fi fi-rr-brain"></i></div>
-        <h3>Cognitive Layer</h3>
-        <p>Adaptive reasoning, contextual understanding, and human-like problem solving.</p>
-      </div>
-      <div class="layer-card">
-        <div class="icon"><i class="fi fi-rr-layers"></i></div>
-        <h3>Process Layer</h3>
-        <p>Automation that stacks AI modules to collaborate efficiently and intelligently.</p>
-      </div>
-      <div class="layer-card">
-        <div class="icon"><i class="fi fi-rr-rocket-lunch"></i></div>
-        <h3>Impact Layer</h3>
-        <p>Real-time optimization and execution across integrated environments and systems.</p>
-      </div>
-      
-    </div>
-    <!-- Decorative glowing image -->
-    <div class="decorative-image">
-      <img src="media/photo2.jpg" alt="AI Visualization" class="glow-image">
-    </div>       
-  </section>
-
-  <!-- Features Section -->
-  <section id="features" class="features">
-    <h2>Key Features</h2>
-    <div class="feature-cards">
-      <div class="feature-card">
-        <h4>Layered Intelligence</h4>
-        <p>AI models communicate across levels to self-optimize and enhance performance.</p>
-      </div>
-      <div class="feature-card">
-        <h4>Seamless Orchestration</h4>
-        <p>Unify multiple AIs and data streams into one coherent, evolving intelligence.</p>
-      </div>
-      <div class="feature-card">
-        <h4>Scalable Integration</h4>
-        <p>Connect to APIs, workflows, and tools without complex setup — plug and evolve.</p>
-      </div>
-    </div>
-    <!-- Decorative glowing image -->
-    <div class="decorative-image">
-      <img src="media/photo1.jpg" alt="AI Visualization" class="glow-image">
-    </div>    
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="contact">
-    <h2>Ready to Experience AutoImpact?</h2>
-    <p>Connect your systems to the future of intelligence today.</p>
-    <button class="btn glow">Join the Beta</button>
-  </section>
-
-  <!-- Plans Section -->
-  <section id="plans" class="plans">
-    <h2>Plans & Pricing</h2>
-    <div class="plans-container">
-      <div class="plan-card">
-        <div class="plan-icon"><i class="fi fi-rs-building"></i></div>
-        <h3>AutoBusiness</h3>
-        <ul>
-          <li>Robust enterprise-grade system</li>
-          <li>Advanced operations and protection</li>
-          <li>Integration with resilient algorithms</li>
-          <li>Reliable performance under heavy load</li>
-        </ul>
-        <p class="price">$79 /mo (Basic) &nbsp;|&nbsp; $199 /mo (Pro with API & Team Support)</p>
-        <p class="target">For companies, teams, and large-scale projects</p>
-        <button class="btn">Subscribe</button>
-      </div>
-
-      <div class="plan-card">
-        <div class="plan-icon"><i class="fi fi-rr-chart-histogram"></i></div>
-        <h3>AutoPulse</h3>
-        <ul>
-          <li>Smart marketing partner that adapts to your rhythm</li>
-          <li>No monthly subscription – pay per result</li>
-          <li>Link accounts, describe tasks, auto-execute</li>
-          <li>Create, post, analyze, and refine strategy</li>
-        </ul>
-        <p class="price">Pay-as-you-go from account balance</p>
-        <p class="target">For marketers, e-commerce, and social creators</p>
-        <button class="btn">Subscribe</button>
-      </div>
-
-      <div class="plan-card">
-        <div class="plan-icon"><i class="fi fi-rr-sparkles"></i></div>
-        <h3>AutoLite</h3>
-        <ul>
-          <li>Lightweight, smart experience for individuals</li>
-          <li>Fast interface with simple tools</li>
-          <li>AI assistant for daily productivity</li>
-          <li>Perfect for getting started affordably</li>
-        </ul>
-        <p class="price">$7 /mo (Basic) &nbsp;|&nbsp; $15 /mo (Advanced)</p>
-        <p class="target">For freelancers, hobbyists, small projects</p>
-        <button class="btn">Subscribe</button>
-      </div>
-    </div>
-    <p class="plans-footer">
-      AutoImpact offers not only tools, but a full intelligent experience combining AI, security, and self-management to fit your digital independence.
+<!-- HERO SECTION -->
+<section id="blog-hero" class="section section-glass">
+  <div class="container">
+    <h1 class="section-title">Insights, Updates & Stories</h1>
+    <p class="section-description">
+      Explore our latest articles, tutorials, and research in AI, software engineering, and product innovation.
     </p>
+    <a href="#latest-posts" class="btn btn-primary">Explore Articles</a>
+  </div>
+</section>
 
-    <div class="stage">
-      <div class="viewport" tabindex="0" aria-label="Infinite AI services carousel">
-        <div class="track" id="track">
-          <div class="card-set" id="cardSet">
+<!-- BLOG CATEGORIES -->
+<section id="blog-categories" class="section section-glass">
+  <div class="container">
+    <h2 class="section-title">Topics</h2>
+    <div class="section-cards">
 
-            <article class="card">
-              <i class="fi fi-rs-globe icon"></i>
-              <div class="card-content">
-                <h4>Global AI Access</h4>
-                <p>A platform that provides access to the most powerful 100 AI models globally.</p>
-              </div>
-              <div class="pulse"></div>
-            </article>
-
-            <article class="card">
-              <i class="fi fi-br-link-alt icon"></i>
-              <div class="card-content">
-                <h4>Multi-Model Integration</h4>
-                <p>Multiple models are used to accomplish the required task and achieve the best results.</p>
-              </div>
-              <div class="pulse"></div>
-            </article>
-
-            <article class="card">
-              <i class="fi fi-rr-shuffle icon"></i>
-              <div class="card-content">
-                <h4>Intelligent Switching</h4>
-                <p>Models are switched automatically and intelligently to ensure optimal performance.</p>
-              </div>
-              <div class="pulse"></div>
-            </article>
-
-            <article class="card">
-              <i class="fi fi-ss-shield-check icon"></i>
-              <div class="card-content">
-                <h4>Central Administration</h4>
-                <p>All operations and coordination between models are performed through the central ImpactCore algorithm.</p>
-              </div>
-              <div class="pulse"></div>
-            </article>
-
-            <article class="card">
-              <i class="fi fi-rs-universal-access icon"></i>
-              <div class="card-content">
-                <h4>Easy access</h4>
-                <p>Access advanced AI from anywhere in the world, with acceptance of many global payment methods and crypto.</p>
-              </div>
-              <div class="pulse"></div>
-            </article>
-
-          </div>
-        </div>
+      <div class="info-card">
+        <i class="fi fi-rr-brain vision-icon"></i>
+        <h3>AI & Machine Learning</h3>
+        <p>Latest research, tutorials, and insights on artificial intelligence and ML.</p>
       </div>
+
+      <div class="info-card">
+        <i class="fi fi-rr-code vision-icon"></i>
+        <h3>Software Engineering</h3>
+        <p>Best practices, development tips, and software architecture guidance.</p>
+      </div>
+
+      <div class="info-card">
+        <i class="fi fi-rr-bolt vision-icon"></i>
+        <h3>Product Updates</h3>
+        <p>Discover new features, updates, and roadmap announcements.</p>
+      </div>
+
+      <div class="info-card">
+        <i class="fi fi-rr-magic-wand vision-icon"></i>
+        <h3>Research & Innovation</h3>
+        <p>Innovative projects, breakthroughs, and AI experiments from our team.</p>
+      </div>
+
+      <div class="info-card">
+        <i class="fi fi-rr-lightbulb vision-icon"></i>
+        <h3>Tutorials & Guides</h3>
+        <p>Step-by-step guides, tips, and hands-on tutorials for developers.</p>
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
+
+<!-- FEATURED ARTICLES -->
+<!-- FEATURED ARTICLES -->
+<section id="featured-articles" class="section section-glass">
+  <div class="container">
+    <h2 class="section-title">Featured Articles</h2>
+    <div class="layers-grid">
+
+      <div class="layer-card professional-card" data-post-id="featured1">
+        <img src="featured1.jpg" alt="Featured Article 1" class="card-img">
+        <h3>Advancing AI with Multi-Layer Architectures</h3>
+        <p>Explore how multi-layer intelligence frameworks are shaping the future of AI systems.</p>
+        <a href="#" class="btn btn-outline">Read More</a>
+        <button class="like-btn" data-liked="false">
+         <i class="fi fi-rr-heart"></i> <span class="like-count">0</span>
+        </button>
+      </div>
+
+      <div class="layer-card professional-card" data-post-id="featured2">
+        <img src="featured2.jpg" alt="Featured Article 2" class="card-img">
+        <h3>Optimizing Software Workflows</h3>
+        <p>Learn practical tips to streamline development pipelines for high-impact software projects.</p>
+        <a href="#" class="btn btn-outline">Read More</a>
+        <button class="like-btn" data-liked="false">
+         <i class="fi fi-rr-heart"></i> <span class="like-count">0</span>
+        </button>
+      </div>
+
+      <div class="layer-card professional-card" data-post-id="featured3">
+        <img src="featured3.jpg" alt="Featured Article 3" class="card-img">
+        <h3>AI Ethics & Responsible Deployment</h3>
+        <p>Understanding ethical considerations and best practices for deploying AI solutions responsibly.</p>
+        <a href="#" class="btn btn-outline">Read More</a>
+        <button class="like-btn" data-liked="false">
+         <i class="fi fi-rr-heart"></i> <span class="like-count">0</span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- LATEST POSTS -->
+<section id="latest-posts" class="section section-glass">
+  <div class="container">
+    <h2 class="section-title">Latest Posts</h2>
+    <div class="values-grid">
+
+      <div class="value-card" data-post-id="post1">
+        <img src="post1.jpg" alt="Post 1" class="card-img">
+        <h4>Understanding Transformers in NLP</h4>
+        <p>March 15, 2025 | by AutoImpact Team</p>
+        <a href="#" class="btn btn-sm btn-outline">Read More</a>
+        <button class="like-btn" data-liked="false">
+         <i class="fi fi-rr-heart"></i> <span class="like-count">0</span>
+        </button>
+      </div>
+
+      <div class="value-card" data-post-id="post2">
+        <img src="post2.jpg" alt="Post 2" class="card-img">
+        <h4>Top 5 Tools for AI Development</h4>
+        <p>March 10, 2025 | by AutoImpact Team</p>
+        <a href="#" class="btn btn-sm btn-outline">Read More</a>
+        <button class="like-btn" data-liked="false">
+         <i class="fi fi-rr-heart"></i> <span class="like-count">0</span>
+        </button>
+      </div>
+
+      <div class="value-card" data-post-id="post3">
+        <img src="post3.jpg" alt="Post 3" class="card-img">
+        <h4>Building Scalable Web Applications</h4>
+        <p>March 5, 2025 | by AutoImpact Team</p>
+        <a href="#" class="btn btn-sm btn-outline">Read More</a>
+        <button class="like-btn" data-liked="false">
+         <i class="fi fi-rr-heart"></i> <span class="like-count">0</span>
+        </button>
+      </div>
+
+      <div class="value-card" data-post-id="post4">
+        <img src="post4.jpg" alt="Post 4" class="card-img">
+        <h4>Integrating AI APIs into Your Product</h4>
+        <p>March 1, 2025 | by AutoImpact Team</p>
+        <a href="#" class="btn btn-sm btn-outline">Read More</a>
+        <button class="like-btn" data-liked="false">
+         <i class="fi fi-rr-heart"></i> <span class="like-count">0</span>
+        </button>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- NEWSLETTER SIGNUP -->
+<section id="newsletter" class="section section-glass">
+  <div class="container">
+    <h2 class="section-title">Stay Updated</h2>
+    <p class="section-description">
+      Subscribe to our newsletter to receive the latest articles, insights, and updates directly in your inbox.
+    </p>
+    <form class="newsletter-form">
+      <input type="email" placeholder="Enter your email" required>
+      <button type="submit" class="btn btn-primary">Subscribe</button>
+    </form>
+  </div>
+</section>
+
 
   
   <!-- Login / Register Modal -->
@@ -336,7 +324,7 @@
         <a href="#docs" target="_blank" rel="noopener noreferrer">Documentation</a>
         <a href="#api" target="_blank" rel="noopener noreferrer">API Reference</a>
         <a href="#tutorials" target="_blank" rel="noopener noreferrer">Tutorials</a>
-        <a href="blog.html" target="_blank" rel="noopener noreferrer">Blog</a>
+        <a href="blog.html" rel="noopener noreferrer">Blog</a>
       </div>
 
       <div class="footer-column">

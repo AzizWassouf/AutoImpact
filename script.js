@@ -261,3 +261,56 @@ document.addEventListener("DOMContentLoaded", () => {
     card.addEventListener('mouseleave',()=>{card.style.transform=''});
   });
 })();
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const likeButtons = document.querySelectorAll(".like-btn");
+
+  likeButtons.forEach(btn => {
+    const postCard = btn.closest(".value-card") || btn.closest(".layer-card");
+    if (!postCard) return;
+
+    const postId = postCard.dataset.postId;
+    if (!postId) return;
+
+    let likes = parseInt(localStorage.getItem(`likes_${postId}`)) || 0;
+    btn.querySelector(".like-count").textContent = likes;
+
+    const likedBefore = localStorage.getItem(`liked_${postId}`) === "true";
+    if (likedBefore) {
+      btn.dataset.liked = "true";
+      btn.classList.add("liked");
+      const icon = btn.querySelector("i");
+      icon.className = "fi fi-sr-heart";
+      icon.style.color = "#fff";
+    }
+
+    btn.addEventListener("click", () => {
+      const liked = btn.dataset.liked === "true";
+      const icon = btn.querySelector("i");
+
+      if (!liked) {
+        likes++;
+        btn.dataset.liked = "true";
+        btn.classList.add("liked");
+        icon.className = "fi fi-sr-heart";
+        icon.style.color = "#fff";
+        localStorage.setItem(`liked_${postId}`, "true");
+      } else {
+        likes--;
+        btn.dataset.liked = "false";
+        btn.classList.remove("liked");
+        icon.className = "fi fi-rr-heart";
+        icon.style.color = "";
+        localStorage.setItem(`liked_${postId}`, "false");
+      }
+
+      btn.querySelector(".like-count").textContent = likes;
+      localStorage.setItem(`likes_${postId}`, likes);
+    });
+  });
+});
+
+
